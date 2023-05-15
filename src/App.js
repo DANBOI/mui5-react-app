@@ -1,8 +1,12 @@
+import { Box } from "@mui/material";
+import Navbar from "./components/Navbar";
 
-function App() {
+const App = () => {
   return (
-    <div>Let's get started!</div>
+    <Box>
+      <Navbar />
+    </Box>
   );
-}
+};
 
 export default App;
