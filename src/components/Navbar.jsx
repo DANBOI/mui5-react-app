@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import {
   styled,
   Box,
@@ -7,6 +8,8 @@ import {
   Typography,
   Badge,
   Avatar,
+  Menu,
+  MenuItem,
 } from "@mui/material";
 // import {
 //   MailIcon,
@@ -50,6 +53,8 @@ const CollapsedUserBox = styled(Box)(({ theme }) => ({
 }));
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <AppBar position="sticky">
       <StyledToolbar>
@@ -68,18 +73,35 @@ const Navbar = () => {
             <NotificationsIcon />
           </Badge>
           <Avatar
-            sx={{ width: 30, height: 30 }}
+            sx={{ width: 30, height: 30, cursor: "pointer" }}
             src="https://cdn.pixabay.com/photo/2013/07/12/18/38/avatar-153605_960_720.png"
+            onClick={() => setIsOpen(true)}
           />
         </ExpandedIcons>
-        <CollapsedUserBox>
+        <CollapsedUserBox onClick={() => setIsOpen(true)}>
           <Avatar
-            sx={{ width: 30, height: 30 }}
+            sx={{ width: 30, height: 30, cursor: "pointer" }}
             src="https://cdn.pixabay.com/photo/2013/07/12/18/38/avatar-153605_960_720.png"
           />
           <Typography variant="span">Chen</Typography>
         </CollapsedUserBox>
       </StyledToolbar>
+      <Menu
+        open={isOpen}
+        onClose={() => setIsOpen(false)}
+        anchorOrigin={{
+          vertical: "top",
+          horizontal: "right",
+        }}
+        transformOrigin={{
+          vertical: "top",
+          horizontal: "right",
+        }}
+      >
+        <MenuItem>Profile</MenuItem>
+        <MenuItem>My account</MenuItem>
+        <MenuItem>Logout</MenuItem>
+      </Menu>
     </AppBar>
   );
 };
