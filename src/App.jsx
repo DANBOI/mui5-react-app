@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import Sidebar from "./components/Sidebar";
 import PostArea from "./components/PostArea";
 import RightSideInfos from "./components/RightSideInfos";
+import CreatePost from "./components/CreatePost";
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
         <PostArea />
         <RightSideInfos />
       </Stack>
+      <CreatePost />
     </Box>
   );
 };
