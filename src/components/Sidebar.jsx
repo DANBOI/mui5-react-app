@@ -14,7 +14,7 @@ import {
 
 import SideItem from "./SideItem";
 
-const Sidebar = () => {
+const Sidebar = ({ mode, setMode }) => {
   return (
     <Box flex={1} p={2} sx={{ display: { xs: "none", sm: "block" } }}>
       <Box position="fixed">
@@ -30,7 +30,12 @@ const Sidebar = () => {
           <SideItem text="Friends" href="/Friends" icon={<Person />} />
           <SideItem text="Settings" href="/Settings" icon={<Settings />} />
           <SideItem text="Profile" href="/Profile" icon={<AccountBox />} />
-          <SideItem isSwitch icon={<Brightness4 />} />
+          <SideItem
+            isSwitch
+            mode={mode}
+            setMode={setMode}
+            icon={<Brightness4 />}
+          />
         </List>
       </Box>
     </Box>

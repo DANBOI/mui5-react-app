@@ -60,12 +60,17 @@ const CreatePost = () => {
         <Box
           width={400}
           height={300}
-          bgcolor={"background.default"}
-          color={"text.primary"}
+          bgcolor="background.default"
+          color="text.primary"
           p={3}
           borderRadius={1}
         >
-          <Typography variant="h6" color="gray" align="center" gutterBottom>
+          <Typography
+            variant="h6"
+            color="secondary"
+            align="center"
+            gutterBottom
+          >
             Create post
           </Typography>
           <UserBox>
@@ -86,9 +91,9 @@ const CreatePost = () => {
           />
           <Stack direction="row" gap={1} mt={2} mb={3}>
             <EmojiEmotions color="primary" />
-            <Image color="secondary" />
-            <VideoCameraBack color="success" />
-            <PersonAdd color="error" />
+            <Image color="primary" />
+            <VideoCameraBack color="primary" />
+            <PersonAdd color="primary" />
           </Stack>
 
           <ButtonGroup sx={{ marginLeft: 30 }} variant="contained">

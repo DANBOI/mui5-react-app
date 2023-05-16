@@ -23,7 +23,7 @@ const StyledToolbar = styled(Toolbar)({
 });
 
 const SearchBar = styled("div")(({ theme }) => ({
-  backgroundColor: "white",
+  backgroundColor: theme.palette.primary.light,
   padding: theme.spacing(0, 10),
   borderRadius: theme.shape.borderRadius,
   width: "40%",
@@ -53,7 +53,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <AppBar position="sticky" sx={{ backgroundColor: "#6b9080" }}>
+    <AppBar position="sticky">
       <StyledToolbar>
         <Link href="/" underline="none">
           <Typography

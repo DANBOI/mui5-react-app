@@ -14,7 +14,7 @@ import { Favorite, FavoriteBorder, MoreVert, Share } from "@mui/icons-material";
 
 const Post = ({ imgUrl }) => {
   return (
-    <Card sx={{ maxWidth: 800, margin: 5 }}>
+    <Card sx={{ maxWidth: 800, margin: 5, bgcolor: "primary" }}>
       <CardHeader
         avatar={
           <Avatar sx={{ bgcolor: "red" }} aria-label="pic">
