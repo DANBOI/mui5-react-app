@@ -2,6 +2,7 @@ import { Box, Stack } from "@mui/material";
 import Navbar from "./components/Navbar";
 import Sidebar from "./components/Sidebar";
 import PostArea from "./components/PostArea";
+import RightSideInfos from "./components/RightSideInfos";
 
 const App = () => {
   return (
@@ -10,6 +11,7 @@ const App = () => {
       <Stack direction="row" spacing={2} justifyContent="space-between">
         <Sidebar />
         <PostArea />
+        <RightSideInfos />
       </Stack>
     </Box>
   );
