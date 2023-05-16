@@ -53,9 +53,9 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <AppBar position="sticky">
+    <AppBar position="sticky" sx={{ backgroundColor: "#6b9080" }}>
       <StyledToolbar>
-        <Link href="/">
+        <Link href="/" underline="none">
           <Typography
             variant="h5"
             sx={{ display: { xs: "none", sm: "block" }, color: "white" }}

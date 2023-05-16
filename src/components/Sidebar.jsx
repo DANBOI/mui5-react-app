@@ -1,13 +1,5 @@
 import React from "react";
-import {
-  Box,
-  List,
-  ListItem,
-  ListItemButton,
-  ListItemIcon,
-  ListItemText,
-  Switch,
-} from "@mui/material";
+import { Box, List } from "@mui/material";
 
 import {
   Home,
@@ -20,75 +12,25 @@ import {
   Brightness4,
 } from "@mui/icons-material";
 
+import SideItem from "./SideItem";
+
 const Sidebar = () => {
   return (
     <Box flex={1} p={2} sx={{ display: { xs: "none", sm: "block" } }}>
       <Box position="fixed">
         <List>
-          <ListItem disablePadding>
-            <ListItemButton component="a" href="#">
-              <ListItemIcon>
-                <Home />
-              </ListItemIcon>
-              <ListItemText primary="Homepage" />
-            </ListItemButton>
-          </ListItem>
-          <ListItem disablePadding>
-            <ListItemButton component="a" href="#">
-              <ListItemIcon>
-                <Article />
-              </ListItemIcon>
-              <ListItemText primary="Pages" />
-            </ListItemButton>
-          </ListItem>
-          <ListItem disablePadding>
-            <ListItemButton component="a" href="#">
-              <ListItemIcon>
-                <Group />
-              </ListItemIcon>
-              <ListItemText primary="Groups" />
-            </ListItemButton>
-          </ListItem>
-          <ListItem disablePadding>
-            <ListItemButton component="a" href="#">
-              <ListItemIcon>
-                <Storefront />
-              </ListItemIcon>
-              <ListItemText primary="Marketplace" />
-            </ListItemButton>
-          </ListItem>
-          <ListItem disablePadding>
-            <ListItemButton component="a" href="#">
-              <ListItemIcon>
-                <Person />
-              </ListItemIcon>
-              <ListItemText primary="Friends" />
-            </ListItemButton>
-          </ListItem>
-          <ListItem disablePadding>
-            <ListItemButton component="a" href="#">
-              <ListItemIcon>
-                <Settings />
-              </ListItemIcon>
-              <ListItemText primary="Settings" />
-            </ListItemButton>
-          </ListItem>
-          <ListItem disablePadding>
-            <ListItemButton component="a" href="#">
-              <ListItemIcon>
-                <AccountBox />
-              </ListItemIcon>
-              <ListItemText primary="Profile" />
-            </ListItemButton>
-          </ListItem>
-          <ListItem disablePadding>
-            <ListItemButton component="a" href="#">
-              <ListItemIcon>
-                <Brightness4 />
-              </ListItemIcon>
-              <Switch />
-            </ListItemButton>
-          </ListItem>
+          <SideItem text="Homepage" href="/Homepage" icon={<Home />} />
+          <SideItem text="Pages" href="/Pages" icon={<Article />} />
+          <SideItem text="Groups" href="/Groups" icon={<Group />} />
+          <SideItem
+            text="Marketplace"
+            href="/Marketplace"
+            icon={<Storefront />}
+          />
+          <SideItem text="Friends" href="/Friends" icon={<Person />} />
+          <SideItem text="Settings" href="/Settings" icon={<Settings />} />
+          <SideItem text="Profile" href="/Profile" icon={<AccountBox />} />
+          <SideItem isSwitch icon={<Brightness4 />} />
         </List>
       </Box>
     </Box>
