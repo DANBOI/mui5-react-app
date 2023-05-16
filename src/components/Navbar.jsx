@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import {
   styled,
   Box,
+  Link,
   AppBar,
   Toolbar,
   InputBase,
@@ -11,14 +12,10 @@ import {
   Menu,
   MenuItem,
 } from "@mui/material";
-// import {
-//   MailIcon,
-//   NotificationsIcon,
-//   AutoAwesomeIcon,
-// } from "@mui/icons-material";
-import MailIcon from "@mui/icons-material/Mail";
-import NotificationsIcon from "@mui/icons-material/Notifications";
-import AutoAwesomeIcon from "@mui/icons-material/AutoAwesome";
+import { Mail, Notifications, AutoAwesome } from "@mui/icons-material";
+// import MailIcon from "@mui/icons-material/Mail";
+// import NotificationsIcon from "@mui/icons-material/Notifications";
+// import AutoAwesomeIcon from "@mui/icons-material/AutoAwesome";
 
 const StyledToolbar = styled(Toolbar)({
   display: "flex",
@@ -58,19 +55,26 @@ const Navbar = () => {
   return (
     <AppBar position="sticky">
       <StyledToolbar>
-        <Typography variant="h5" sx={{ display: { xs: "none", sm: "block" } }}>
-          MUI5
-        </Typography>
-        <AutoAwesomeIcon sx={{ display: { xs: "block", sm: "none" } }} />
+        <Link href="/">
+          <Typography
+            variant="h5"
+            sx={{ display: { xs: "none", sm: "block" }, color: "white" }}
+          >
+            MUI5
+          </Typography>
+          <AutoAwesome
+            sx={{ display: { xs: "block", sm: "none" }, color: "white" }}
+          />
+        </Link>
         <SearchBar>
           <InputBase placeholder="search..." />
         </SearchBar>
         <ExpandedIcons>
           <Badge badgeContent={3} color="error">
-            <MailIcon />
+            <Mail />
           </Badge>
           <Badge badgeContent={2} color="error">
-            <NotificationsIcon />
+            <Notifications />
           </Badge>
           <Avatar
             sx={{ width: 30, height: 30, cursor: "pointer" }}
